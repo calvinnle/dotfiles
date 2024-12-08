@@ -20,6 +20,7 @@ ln -svnf $CONFIG_DIR/starship ~/.config/starship
 ln -svnf $CONFIG_DIR/zsh/.zshrc ~/.zshrc
 ln -svnf $CONFIG_DIR/zsh/alias.zsh ~/.config/zsh/alias.zsh
 ln -svnf $CONFIG_DIR/starship/starship.toml ~/.config/starship.toml
+ln -svnf $CONFIG_DIR/tmux/.tmux.conf ~/.tmux.conf
 
 # Print completion message
 echo "Symlinks created successfully!"
