@@ -1,8 +1,4 @@
 # ~/.config/alacritty/alacritty.toml
-
-
-
-
 [window]
 # Set the dimensions (columns x rows)
 dimensions = { columns = 85, lines = 26 }

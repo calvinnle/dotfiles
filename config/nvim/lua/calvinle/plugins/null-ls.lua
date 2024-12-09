@@ -11,6 +11,6 @@ return {
     --             null_ls.builtins.formatting.black, -- Python
     --             null_ls.builtins.formatting.prettier, -- JavaScript, TypeScript
     --         },
-    --     })
-    end,
+    --     }
+    -- end,
 }
