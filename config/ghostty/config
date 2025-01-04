@@ -1,14 +1,13 @@
 window-height = 22
-window-width = 80
+window-width = 81
 window-step-resize = true
 window-padding-balance
-window-theme = system
-background-opacity = 0.95
+background-opacity = 0.90
 resize-overlay = always
 
 macos-titlebar-style = native
-macos-titlebar-proxy-icon = hidden
 macos-icon = official
+macos-titlebar-style = hidden
 
 cursor-style-blink = false
 cursor-color = #2BFFB8
