@@ -4,14 +4,10 @@ return {
   config = function()
     local nvimtree = require("nvim-tree")
 
-    -- recommended settings from nvim-tree documentation
-    vim.g.loaded_netrw = 1
-    vim.g.loaded_netrwPlugin = 1
-
     nvimtree.setup({
       view = {
         width = 35,
-        relativenumber = true,
+        -- relativenumber = true,
       },
       -- change folder arrow icons
       renderer = {
@@ -25,6 +21,11 @@ return {
               arrow_open = "", -- arrow when folder is open
             },
           },
+          show = {
+            -- folder = false,
+            -- folder_arrow = false,
+            git = true,
+          }
         },
       },
       -- disable window_picker for

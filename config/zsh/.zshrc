@@ -16,7 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # All my favorite ZSH Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
 #
@@ -60,17 +60,17 @@ fi
 
 # Functions
 function lsPretty() {
-	eza  --icons --hyperlink --time-style relative $1
+	eza  --hyperlink --time-style relative $1
 }
 
 function llPretty() {
-	eza -l -a --icons --hyperlink --time-style relative $1
+	eza -l  --hyperlink --time-style relative $1
 }
 
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -81,3 +81,5 @@ eval "$(starship init zsh)"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH="$PATH:$HOME/flutter/bin"
+
+eval "$(zoxide init zsh)"
