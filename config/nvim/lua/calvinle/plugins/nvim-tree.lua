@@ -14,13 +14,18 @@ return {
         indent_markers = {
           enable = true,
        },
-        icons = {
-          glyphs = {
-            folder = {
-              arrow_closed = "", -- arrow when folder is closed
-              arrow_open = "", -- arrow when folder is open
-            },
-          },
+       icons = {
+           glyphs = {
+               folder = {
+                   -- arrow_closed = "",     -- Arrow for a closed folder
+                   -- arrow_open = "",       -- Arrow for an open folder
+                   -- default = "",          -- Default folder icon (closed)
+                   -- open = "",             -- Open folder icon
+                   -- empty = "",            -- Empty folder icon (closed)
+                   -- empty_open = "",       -- Empty folder icon (open)
+                   -- symlink = "",          -- Symlink folder icon
+               },
+           },
           show = {
             -- folder = false,
             -- folder_arrow = false,

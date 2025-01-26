@@ -27,7 +27,8 @@ return {
                 "rust_analyzer",  -- Rust
                 "clangd",         -- C, C++
                 "pyright",        -- Python
-                -- "jdtls",          -- Java
+                "ts_ls", -- JavaScript and TypeScript
+                "eslint",         -- JavaScript/TypeScript linting
             },
         })
 
@@ -37,7 +38,17 @@ return {
             rust_analyzer = {},
             clangd = {},
             pyright = {},
-            -- jdtls = {},
+            ["ts_ls"] = {
+                settings = {
+                    javascript = {
+                        format = { enable = true },
+                    },
+                    typescript = {
+                        format = { enable = true },
+                    },
+                },
+            },
+            eslint = {},
         }
 
         for server, config in pairs(servers) do
