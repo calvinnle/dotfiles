@@ -6,8 +6,7 @@ return {
     --         require('nordic').setup({
     --             on_palette = function(palette) end,
     --             after_palette = function(palette) end,
-    --             bold_keywords = false,
-    --             italic_comments = true,
+    --             bold_keywords = false, italic_comments = true,
     --             transparent = {
     --                 bg = false,
     --                 float = false,
@@ -85,18 +84,11 @@ return {
           keywords = { "italic", "bold" },
         },
         color_overrides = {
-            mocha = {
-                base =      "#080808",
-                mantle =    "#080808",
-                crust =     "#080808",
-            },
-
             macchiato = {
                 base =      "#080808",
                 mantle =    "#080808",
                 crust =     "#080808",
-            }
-
+            },
         },
         integrations = {
           treesitter = true,

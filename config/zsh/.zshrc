@@ -57,11 +57,11 @@ fi
 
 # Functions
 function lsPretty() {
-	eza  --hyperlink --time-style relative $1
+	eza --time-style relative $1
 }
 
 function llPretty() {
-	eza -l  --hyperlink --time-style relative $1
+	eza -l --time-style relative $1
 }
 
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home
@@ -86,3 +86,7 @@ export PATH=$PATH:~/zig
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(~/.local/bin/mise activate)"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+

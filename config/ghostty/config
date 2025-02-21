@@ -1,15 +1,17 @@
-window-height=510
-window-width=1640
+window-height=6666
+window-width=8888
 window-step-resize = true
-window-padding-balance
-background-opacity = 0.958
-background = 080808
+window-padding-balance = true
 window-save-state = always
+window-padding-x = 3
 
-resize-overlay = always
+background-opacity = 0.85
+background = 000000
+
 macos-icon = official
+title = "👻"
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = hidden
+macos-titlebar-style = hidden 
 
 cursor-style-blink = false
 cursor-color = #FFFFFF
@@ -17,8 +19,7 @@ mouse-hide-while-typing
 
 working-directory = home
 
-font-family = "Symbols Nerd Font Mono"
 font-style = Regular
-font-size = 11
+font-size = 12
 font-thicken = true
 font-feature = -calt -dlig -liga

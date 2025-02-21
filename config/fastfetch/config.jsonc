@@ -1,65 +1,146 @@
+//{
+//    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+//    "logo": {
+//        "source": "~/.config/fastfetch/logos/ascii.txt",
+//        "type": "file",
+//        "padding": {
+//            "top": 1,
+//            "left": 3
+//        }
+//    },
+//    "display": {
+//        "separator": "",
+//        "key": {
+//            "width": 15
+//        },
+//        "color": {
+//            "keys": "white",
+//            "title": "cyan"
+//        }
+//    },
+//    "modules": [
+//        {
+//            "key": "╭───────────╮",
+//            "type": "custom"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#36} user",
+//            "type": "title"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#31}󰅐 uptime",
+//            "type": "uptime"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#32} term",
+//            "type": "terminal",
+//            "format": "{5}"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#33} shell",
+//            "type": "shell"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#34}󰍛 cpu",
+//            "type": "cpu",
+//            "format": "{1}"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#35} memory",
+//            "type": "memory"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#39}󰓡 swap",
+//            "type": "swap"
+//        },
+//        {
+//            "key": "│           │\u001b[11D{#36}󰩟 network",
+//            "type": "localip",
+//            "format": "{1} ({4})"
+//        },
+//        {
+//            "key": "╰───────────╯",
+//            "type": "custom"
+//        }
+//    ]
+//}
+
+
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "source": "~/.config/fastfetch/logos/ascii.txt",
-        "type": "file",
-        "padding": {
-            "top": 1,
-            "left": 3
-        }
-    },
+    "logo": null,
     "display": {
-        "separator": "",
-        "key": {
-            "width": 15
-        },
+        "separator": "\u001b[35m>  \u001b[0m", // Purple separator
         "color": {
-            "keys": "white",
-            "title": "cyan"
-        }
+            "separator": "red" // This can remain red or be changed to purple if desired
+        },
+        "constants": [
+            "\u001b[35m───────────────────────────────────────────────────────────────────────────\u001b[0m", // Purple line
+            "\u001b[35m│\u001b[75C│\u001b[75D\u001b[0m" // Purple vertical bars
+        ]
     },
     "modules": [
         {
-            "key": "╭───────────╮",
-            "type": "custom"
-        },
-        {
-            "key": "│           │\u001b[11D{#36} user",
+            "format": "\u001b[35m{#1}{#keys}╭{$1}╮\u001b[76D \u001b[0m{user-name-colored}{at-symbol-colored}{host-name-colored} 🖥  ",
             "type": "title"
         },
         {
-            "key": "│           │\u001b[11D{#31}󰅐 uptime",
+            "key": "{$2}{#31} kernel   ",
+            "type": "kernel"
+        },
+        {
+            "key": "{$2}{#32}󰅐 uptime   ",
             "type": "uptime"
         },
         {
-            "key": "│           │\u001b[11D{#32} term",
-            "type": "terminal",
-            "format": "{5}"
+            "key": "{$2}{#33}{icon} distro   ",
+            "type": "os"
         },
         {
-            "key": "│           │\u001b[11D{#33} shell",
+            "key": "{$2}{#34}󰇄 desktop  ",
+            "type": "de"
+        },
+        {
+            "key": "{$2}{#35} term     ",
+            "type": "terminal"
+        },
+        {
+            "key": "{$2}{#36} shell    ",
             "type": "shell"
         },
         {
-            "key": "│           │\u001b[11D{#34}󰍛 cpu",
-            "type": "cpu",
-            "format": "{1}"
+            "key": "{$2}{#35}󰍛 cpu      ",
+            "type": "cpu"
         },
         {
-            "key": "│           │\u001b[11D{#35} memory",
+            "key": "{$2}{#34}󰍛 gpu      ",
+            "type": "gpu"
+        },
+        {
+            "key": "{$2}{#33}󰉉 disk     ",
+            "type": "disk",
+            "folders": "/"
+        },
+        {
+            "key": "{$2}{#32} memory   ",
             "type": "memory"
         },
         {
-            "key": "│           │\u001b[11D{#39}󰓡 swap",
-            "type": "swap"
-        },
-        {
-            "key": "│           │\u001b[11D{#36}󰩟 network",
+            "key": "{$2}{#31}󰩟 network  ",
             "type": "localip",
-            "format": "{1} ({4})"
+            "format": "{ipv4} ({ifname})"
         },
         {
-            "key": "╰───────────╯",
+            "format": "\u001b[35m{#1}{#keys}├{$1}┤\u001b[0m", // Purple border
+            "type": "custom"
+        },
+        {
+            "key": "{$2}{#39} colors   ",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "format": "\u001b[35m{#1}{#keys}╰{$1}╯\u001b[0m", // Purple border
             "type": "custom"
         }
     ]

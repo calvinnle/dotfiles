@@ -6,8 +6,8 @@ return {
             direction = 'horizontal',  -- Default direction for terminals
             float_opts = {
                 border = 'rounded',  -- Rounded border for floating terminals
-                width = 80,
-                height = 20,
+                width = 88,
+                height = 22,
             },
             shade_terminals = true, -- Enable shading for terminal backgrounds
             shading_factor = -50    -- Negative value to darken terminal
