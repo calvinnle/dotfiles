@@ -4,7 +4,7 @@ My personal dotfiles repository containing configuration files for various tools
 
 ![Neovim Setup](assets/editor.png)
 
-## 🛠️ Main Tools
+## Main Tools
 
 - [Homebrew](https://brew.sh/) - Package manager for macOS
 - [Neovim](https://neovim.io/) - Text editor
@@ -14,7 +14,7 @@ My personal dotfiles repository containing configuration files for various tools
 - [Aerospace](https://aerospace.app/) - Window manager (i3-like for macOS)
 - [Zsh](https://www.zsh.org/) - Shell configuration
 
-## 🚀 Installation
+## Installation
 
 ### For macOS Users
 
@@ -69,7 +69,7 @@ chmod +x link.sh
 ./link.sh
 ```
 
-## 📝 Important Notes
+## Important Notes
 
 - Use a modern terminal emulator (iTerm2, WezTerm, Ghostty) as the default macOS terminal cannot properly display themes
 - Install Nerd Fonts for proper display of icons, text, and folder symbols
@@ -77,7 +77,7 @@ chmod +x link.sh
   - `ripgrep` for Telescope live grep
   - `wget` for Mason to download packages
 
-## 📁 Structure
+## Structure
 
 ```
 dotfiles/
@@ -95,7 +95,7 @@ dotfiles/
 └── link.sh        # Installation script
 ```
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 Stuff I'd love to add if I had more time (and motivation):
 
@@ -103,10 +103,10 @@ Stuff I'd love to add if I had more time (and motivation):
 - **Nix**: The holy grail of reproducible environments. Sounds amazing, but learning Nix feels like learning a new language. Maybe next year? 
 - **Sketchybar**: Would make my setup look extra pretty. But not exactly a priority when everything works smoothly.
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to open issues or submit pull requests if you have suggestions for improvements. 
