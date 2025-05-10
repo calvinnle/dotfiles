@@ -1,0 +1,25 @@
+window-height=66666
+window-width=8888
+window-step-resize = true
+window-padding-balance = true
+window-save-state = always
+window-padding-x = 6
+
+background = 000000
+background-opacity = 0.985
+macos-icon = official
+title = "👻"
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = hidden 
+
+cursor-style-blink = false
+cursor-style = block
+cursor-color = white
+mouse-hide-while-typing
+
+working-directory = home
+
+font-style = Regular
+font-size = 12
+font-thicken = true
+font-feature = -calt -dlig -liga
