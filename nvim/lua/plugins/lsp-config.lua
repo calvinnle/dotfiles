@@ -12,6 +12,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
+          "pyright",
           "lua_ls",
           "ts_ls",
           "cssls",
@@ -47,6 +48,11 @@ return {
             },
           },
         },
+      })
+
+      -- python
+      lspconfig.python.setup({
+        capabilities = capabilities,
       })
 
       -- typescript
