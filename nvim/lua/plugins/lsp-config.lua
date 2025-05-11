@@ -12,7 +12,6 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "pyright",
           "lua_ls",
           "ts_ls",
           "cssls",
@@ -21,6 +20,7 @@ return {
           "clangd",
           "jdtls",
           "vuels",
+          "pylsp",
         },
       })
     end,
@@ -51,7 +51,7 @@ return {
       })
 
       -- python
-      lspconfig.python.setup({
+      lspconfig.pylsp.setup({
         capabilities = capabilities,
       })
 
@@ -85,10 +85,6 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities,
       })
-
-      -- python
-      lspconfig.pyright.setup({ capabilities = capabilities })
-
       -- html
       lspconfig.html.setup({ capabilities = capabilities })
 

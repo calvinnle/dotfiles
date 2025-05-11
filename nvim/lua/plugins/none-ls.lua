@@ -10,7 +10,8 @@ return {
     null_ls.setup({
       sources = {
         -- Diagnostics
-        null_ls.builtins.diagnostics.eslint,
+        -- null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.diagnostics.pylint,
 
         -- Formatters
         null_ls.builtins.formatting.stylua,
