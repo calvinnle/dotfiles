@@ -1,4 +1,4 @@
-# My MacOS Configurations
+# Dotfiles
 
 My personal dotfiles repository containing configuration files for various tools and applications I use daily. These are the configs I spend 90% of my time in — obsessively tuned, occasionally broken, and always evolving.
 
