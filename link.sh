@@ -16,8 +16,9 @@ ln -svnf $DOTFILES_DIR/starship ~/.config/starship
 ln -svnf $DOTFILES_DIR/ghostty ~/.config/ghostty
 ln -svnf $DOTFILES_DIR/fastfetch ~/.config/fastfetch
 ln -svnf $DOTFILES_DIR/wezterm/.wezterm.lua ~/.wezterm.lua
-
-# Additional symlinks for specific files
+ln -svnf $DOTFILES_DIR/sketchybar ~/.config/sketchybar
+ln -svnf $DOTFILES_DIR/karabiner ~/.config/karabiner
+ln -svnf $DOTFILES_DIR/borders ~/.config/borders
 ln -svnf $DOTFILES_DIR/zsh/.zshrc ~/.zshrc
 ln -svnf $DOTFILES_DIR/zsh/alias.zsh ~/.config/zsh/alias.zsh
 ln -svnf $DOTFILES_DIR/starship/starship.toml ~/.config/starship.toml
