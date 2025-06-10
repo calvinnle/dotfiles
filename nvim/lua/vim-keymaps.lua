@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 
 -- Explore keymap
-keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- window management
 keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })

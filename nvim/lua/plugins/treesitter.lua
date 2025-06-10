@@ -12,8 +12,8 @@ return {
         "vim",
         "javascript",
         "typescript",
-        "tsx",         -- React (TypeScript JSX)
-        "vue",         -- Vue support
+        "tsx",
+        "vue",
         "html",
         "go",
         "nix",
@@ -26,8 +26,8 @@ return {
       },
       sync_install = false,
       auto_install = true,
-      ignore_install = {},       -- required field
-      modules = {},              -- required field
+      ignore_install = {}, -- required field
+      modules = {},        -- required field
 
       highlight = {
         enable = true,

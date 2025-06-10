@@ -3,7 +3,7 @@ return {
     build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
     dependencies = {
         "nvim-telescope/telescope.nvim",
-        -- "ibhagwan/fzf-lua",
+        "ibhagwan/fzf-lua",
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
     },
@@ -12,7 +12,12 @@ return {
         arg = "leetcode.nvim",
 
         ---@type lc.lang
-        lang = "cpp",
+        lang = {
+            "cpp",
+            "go",
+            "c",
+            "rust",
+        },
 
         cn = { -- leetcode.cn
             enabled = false, ---@type boolean

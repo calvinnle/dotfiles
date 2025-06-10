@@ -5,8 +5,6 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
-alias f="fastfetch"
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -22,7 +20,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME="apple"
 #
 # Default prompt
-PS1='calvin@MBP %1~ %# '
+PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
 # Plugins
 plugins+=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux )
 
@@ -67,6 +65,7 @@ function llPretty() {
 
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
+export PATH="$HOME/.local/scripts:$PATH"
 
 # eval "$(starship init zsh)"
 
@@ -100,3 +99,5 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=/Users/lenguyenkhang/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+bindkey -s ^f "tmux-sessionizer\n"

@@ -3,8 +3,8 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
--- vim.cmd("set expandtab")
 -- vim.cmd("set tabstop=2")
+-- vim.cmd("set expandtab")
 -- vim.cmd("set softtabstop=2")
 -- vim.cmd("set shiftwidth=2")
 
@@ -24,17 +24,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Set color column
--- vim.opt.colorcolumn = "90"
-
-vim.cmd([[
-  highlight CursorLineNr guifg=yellow gui=bold
-]])
-
-vim.opt.cursorline = false
+-- only number is highlighted for cursorline
+vim.opt.culopt = "number"
+-- vim.opt.cursorline = true
 
 -- for dark mod3
--- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 -- for light mod3
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
@@ -44,4 +39,16 @@ vim.opt.guicursor = "n-v-c-sm:block"
 
 vim.o.scrolloff = 10
 vim.opt.swapfile = false
-vim.opt.colorcolumn = "94"
+vim.opt.nuw = 5
+vim.o.termguicolors = true
+vim.opt.colorcolumn = "85"
+
+-- Renders spaces as "·"
+-- vim.opt.list = true
+-- vim.opt.listchars = vim.opt.listchars + "space:·"
+
+vim.opt.signcolumn = "yes"
+
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
