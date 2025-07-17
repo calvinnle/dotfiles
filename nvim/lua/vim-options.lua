@@ -1,12 +1,12 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-
--- vim.cmd("set tabstop=2")
 -- vim.cmd("set expandtab")
--- vim.cmd("set softtabstop=2")
--- vim.cmd("set shiftwidth=2")
+-- vim.cmd("set tabstop=4")
+-- vim.cmd("set softtabstop=4")
+-- vim.cmd("set shiftwidth=4")
+
+vim.cmd("set tabstop=2")
+vim.cmd("set expandtab")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
 
 -- copy to system clipboard
 vim.opt.clipboard:append("unnamedplus")
@@ -25,11 +25,11 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- only number is highlighted for cursorline
-vim.opt.culopt = "number"
--- vim.opt.cursorline = true
+-- vim.opt.culopt = "screenline"
+vim.opt.cursorline = false
 
 -- for dark mod3
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
+-- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 -- for light mod3
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
@@ -37,17 +37,13 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 -- Customize cursor appearance
 vim.opt.guicursor = "n-v-c-sm:block"
 
-vim.o.scrolloff = 10
+vim.o.scrolloff = 8
 vim.opt.swapfile = false
-vim.opt.nuw = 5
+vim.opt.nuw = 6
 vim.o.termguicolors = true
 vim.opt.colorcolumn = "85"
 
--- Renders spaces as "·"
--- vim.opt.list = true
--- vim.opt.listchars = vim.opt.listchars + "space:·"
-
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0

@@ -1,12 +1,12 @@
 after-startup-command = [
-    # 'exec-and-forget borders active_color=0xff00f5ff inactive_color=0xff555555 width=8.0',
-    'exec-and-forget sketchybar'
+    'exec-and-forget borders active_color=0xff00f5ff inactive_color=0xff555555 width=8.0',
+    # 'exec-and-forget sketchybar'
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-]
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -122,12 +122,12 @@ preset = 'qwerty'
 
 
 [gaps]
-inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     -1
-outer.top =        -5
-outer.right =      0
+inner.horizontal = 8
+inner.vertical =   8
+outer.left =       35
+outer.bottom =     35
+outer.top =        35
+outer.right =      35
 
 [exec] # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true # If you don't touch "exec" section,
@@ -194,9 +194,9 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
-# alt-6 = 'workspace 6'
-# alt-7 = 'workspace 7'
-# alt-8 = 'workspace 8'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -204,9 +204,9 @@ alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
 alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-# alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-# alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-# alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'

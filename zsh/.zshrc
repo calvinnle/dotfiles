@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # All my favorite ZSH Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
 #
@@ -67,7 +67,7 @@ export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 export PATH="$HOME/.local/scripts:$PATH"
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
