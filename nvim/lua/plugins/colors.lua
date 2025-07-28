@@ -1,114 +1,114 @@
 return {
-  -- {
-  -- 	"maxmx03/solarized.nvim",
-  -- 	lazy = false,
-  -- 	priority = 1000,
-  -- 	opts = {},
-  -- 	config = function(_, opts)
-  -- 		vim.o.termguicolors = true
-  -- 		vim.o.background = "light"
-  -- 		require("solarized").setup(opts)
-  -- 	end,
-  -- },
+	-- -- {
+	-- -- 	"maxmx03/solarized.nvim",
+	-- -- 	lazy = false,
+	-- -- 	priority = 1000,
+	-- -- 	opts = {},
+	-- -- 	config = function(_, opts)
+	-- -- 		vim.o.termguicolors = true
+	-- -- 		vim.o.background = "light"
+	-- -- 		require("solarized").setup(opts)
+	-- -- 	end,
+	-- -- },
+	--
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				variant = "dawn", -- auto, main, moon, or dawn
+				dark_variant = "dawm", -- main, moon, or dawn
+				dim_inactive_windows = false,
+				extend_background_behind_borders = true,
 
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup({
-        variant = "dawn",  -- auto, main, moon, or dawn
-        dark_variant = "dawm", -- main, moon, or dawn
-        dim_inactive_windows = false,
-        extend_background_behind_borders = true,
+				enable = {
+					terminal = false,
+					legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+					migrations = true, -- Handle deprecated options automatically
+				},
 
-        enable = {
-          terminal = false,
-          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-          migrations = true,   -- Handle deprecated options automatically
-        },
+				styles = {
+					bold = true,
+					italic = false,
+					transparency = true,
+				},
 
-        styles = {
-          bold = true,
-          italic = true,
-          transparency = true,
-        },
+				groups = {
+					border = "muted",
+					link = "iris",
+					panel = "surface",
 
-        groups = {
-          border = "muted",
-          link = "iris",
-          panel = "surface",
+					error = "love",
+					hint = "iris",
+					info = "foam",
+					note = "pine",
+					todo = "rose",
+					warn = "gold",
 
-          error = "love",
-          hint = "iris",
-          info = "foam",
-          note = "pine",
-          todo = "rose",
-          warn = "gold",
+					git_add = "foam",
+					git_change = "rose",
+					git_delete = "love",
+					git_dirty = "rose",
+					git_ignore = "muted",
+					git_merge = "iris",
+					git_rename = "pine",
+					git_stage = "iris",
+					git_text = "rose",
+					git_untracked = "subtle",
 
-          git_add = "foam",
-          git_change = "rose",
-          git_delete = "love",
-          git_dirty = "rose",
-          git_ignore = "muted",
-          git_merge = "iris",
-          git_rename = "pine",
-          git_stage = "iris",
-          git_text = "rose",
-          git_untracked = "subtle",
+					h1 = "iris",
+					h2 = "foam",
+					h3 = "rose",
+					h4 = "gold",
+					h5 = "pine",
+					h6 = "foam",
+				},
 
-          h1 = "iris",
-          h2 = "foam",
-          h3 = "rose",
-          h4 = "gold",
-          h5 = "pine",
-          h6 = "foam",
-        },
+				palette = {
+					-- Override the builtin palette per variant
+					-- moon = {
+					--     base = '#18191a',
+					--     overlay = '#363738',
+					-- },
+				},
 
-        palette = {
-          -- Override the builtin palette per variant
-          -- moon = {
-          --     base = '#18191a',
-          --     overlay = '#363738',
-          -- },
-        },
+				-- NOTE: Highlight groups are extended (merged) by default. Disable this
+				-- per group via `inherit = false`
+				highlight_groups = {
+					-- Comment = { fg = "foam" },
+					StatusLine = { fg = "muted", bg = "base", blend = 15 },
+					-- VertSplit = { fg = "muted", bg = "muted" },
+					-- Visual = { fg = "base", bg = "text", inherit = false },
 
-        -- NOTE: Highlight groups are extended (merged) by default. Disable this
-        -- per group via `inherit = false`
-        highlight_groups = {
-          -- Comment = { fg = "foam" },
-          StatusLine = { fg = "muted", bg = "base", blend = 15 },
-          -- VertSplit = { fg = "muted", bg = "muted" },
-          -- Visual = { fg = "base", bg = "text", inherit = false },
+					-- Telescope custom highlights
+					TelescopeNormal = { bg = "base" },
+					TelescopeBorder = { bg = "base", fg = "muted" },
+					TelescopePromptNormal = { bg = "base" },
+					TelescopePromptBorder = { bg = "base", fg = "muted" },
+					TelescopeResultsNormal = { bg = "base" },
+					TelescopeResultsBorder = { bg = "base", fg = "muted" },
+					TelescopePreviewNormal = { bg = "base" },
+					TelescopeSelection = { bg = "highlight_high", fg = "text" },
+					TelescopeSelectionCaret = { fg = "love" }, -- optional, to color the caret				TelescopePreviewBorder = { bg = "base", fg = "muted" },
+				},
 
-          -- Telescope custom highlights
-          TelescopeNormal = { bg = "base" },
-          TelescopeBorder = { bg = "base", fg = "muted" },
-          TelescopePromptNormal = { bg = "base" },
-          TelescopePromptBorder = { bg = "base", fg = "muted" },
-          TelescopeResultsNormal = { bg = "base" },
-          TelescopeResultsBorder = { bg = "base", fg = "muted" },
-          TelescopePreviewNormal = { bg = "base" },
-          TelescopeSelection = { bg = "highlight_high", fg = "text" },
-          TelescopeSelectionCaret = { fg = "love" }, -- optional, to color the caret				TelescopePreviewBorder = { bg = "base", fg = "muted" },
-        },
+				before_highlight = function(group, highlight, palette)
+					-- Disable all undercurls
+					if highlight.undercurl then
+						highlight.undercurl = false
+					end
 
-        before_highlight = function(group, highlight, palette)
-          -- Disable all undercurls
-          if highlight.undercurl then
-            highlight.undercurl = false
-          end
+					-- Change palette colour
+					if highlight.fg == palette.pine then
+						highlight.fg = palette.foam
+					end
+				end,
+			})
 
-          -- Change palette colour
-          if highlight.fg == palette.pine then
-            highlight.fg = palette.foam
-          end
-        end,
-      })
-
-      vim.cmd("colorscheme rose-pine-main")
-      -- vim.cmd("colorscheme rose-pine-moon")
-      -- vim.cmd("colorscheme rose-pine-dawn")
-      -- vim.cmd("colorscheme rose-pine")
-    end,
-  },
+			vim.cmd("colorscheme rose-pine-main")
+			-- vim.cmd("colorscheme rose-pine-moon")
+			-- vim.cmd("colorscheme rose-pine-dawn")
+			-- vim.cmd("colorscheme rose-pine")
+		end,
+	},
 }

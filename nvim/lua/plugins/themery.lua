@@ -303,10 +303,10 @@ return {
 	-- 			-- NOTE: Highlight groups are extended (merged) by default. Disable this
 	-- 			-- per group via `inherit = false`
 	-- 			highlight_groups = {
-	--        -- Comment = { fg = "foam" },
-	--        StatusLine = { fg = "muted", bg = "base", blend = 15 },
-	--        -- VertSplit = { fg = "muted", bg = "muted" },
-	--        -- Visual = { fg = "base", bg = "text", inherit = false },
+	-- 				-- Comment = { fg = "foam" },
+	-- 				StatusLine = { fg = "muted", bg = "base", blend = 15 },
+	-- 				-- VertSplit = { fg = "muted", bg = "muted" },
+	-- 				-- Visual = { fg = "base", bg = "text", inherit = false },
 	--
 	-- 				-- Telescope custom highlights
 	-- 				TelescopeNormal = { bg = "base" },
@@ -316,7 +316,8 @@ return {
 	-- 				TelescopeResultsNormal = { bg = "base" },
 	-- 				TelescopeResultsBorder = { bg = "base", fg = "muted" },
 	-- 				TelescopePreviewNormal = { bg = "base" },
-	-- 				TelescopePreviewBorder = { bg = "base", fg = "muted" },
+	-- 				TelescopeSelection = { bg = "highlight_high", fg = "text" },
+	-- 				TelescopeSelectionCaret = { fg = "love" }, -- optional, to color the caret				TelescopePreviewBorder = { bg = "base", fg = "muted" },
 	-- 			},
 	--
 	-- 			before_highlight = function(group, highlight, palette)
@@ -342,7 +343,10 @@ return {
 	-- {
 	-- 	"vague2k/vague.nvim",
 	-- 	config = function()
-	-- 		require("vague").setup({ transparent = false })
+	-- 		require("vague").setup({
+	-- 			transparent = false,
+	-- 			italic = false,
+	-- 		})
 	-- 	end,
 	-- },
 	-- {

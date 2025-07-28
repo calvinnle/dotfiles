@@ -6,12 +6,7 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
 config.font = wezterm.font_with_fallback({
-  {
-    family = "JetBrainsMono Nerd Font",
-    weight = "Regular",
-  },
-  { family = "Iosevka Nerd Font" },
-  { family = "FiraCode Nerd Font" },
+  { family = "FiraCode Nerd Font", weight = "Medium" },
 })
 
 config.font_size = 15
@@ -27,6 +22,8 @@ config.colors = {
   -- cursor_fg = "white",
   -- cursor_bg = "20C20E",
 }
+
+configcursor_blink_rate = 600
 
 config.color_scheme = "catppuccin-mocha"
 
@@ -44,14 +41,14 @@ config.window_background_image_hsb = {
 
 config.window_background_opacity = 0.9
 -- config.window_background_opacity = 1
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 20
 
 -- uncomment these if u wanna be cool - you're not
 
 -- local user_home = os.getenv("HOME")
 -- local background_folder = user_home .. "/Documents/wallpaper"
 --
--- local bg_image = background_folder .. "/good.gif"
+-- local bg_image = background_folder .. "/stalenhag.jpg"
 --
 -- config.window_background_image = bg_image
 --

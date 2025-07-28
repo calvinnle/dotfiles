@@ -122,12 +122,12 @@ preset = 'qwerty'
 
 
 [gaps]
-inner.horizontal = 8
-inner.vertical =   8
-outer.left =       35
-outer.bottom =     35
-outer.top =        35
-outer.right =      35
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       20
+outer.bottom =     20
+outer.top =        20
+outer.right =      20
 
 [exec] # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true # If you don't touch "exec" section,

@@ -35,7 +35,7 @@ vim.opt.cursorline = false
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
 
 -- Customize cursor appearance
-vim.opt.guicursor = "n-v-c-sm:block"
+-- vim.opt.guicursor = "n-v-c-sm:block"
 
 vim.o.scrolloff = 8
 vim.opt.swapfile = false
@@ -43,8 +43,12 @@ vim.opt.nuw = 6
 vim.o.termguicolors = true
 vim.opt.colorcolumn = "85"
 
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+-- Renders spaces as "·"
+-- vim.opt.list = true
+-- vim.opt.listchars = vim.opt.listchars + "space:·"
