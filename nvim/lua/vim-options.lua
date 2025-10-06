@@ -35,7 +35,7 @@ vim.opt.cursorline = false
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
 
 -- Customize cursor appearance
--- vim.opt.guicursor = "n-v-c-sm:block"
+vim.opt.guicursor = "n-v-c-sm:block"
 
 vim.o.scrolloff = 8
 vim.opt.swapfile = false

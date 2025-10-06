@@ -13,9 +13,9 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # All my favorite ZSH Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
 #

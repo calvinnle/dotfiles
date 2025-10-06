@@ -1,34 +1,34 @@
 return {
-	"lewis6991/gitsigns.nvim",
-	event = "BufRead",
-	opts = {
-		signs = {
-			add = { text = "┃" },
-			chage = { text = "┃" },
-			delete = { text = "_" },
-			topdelete = { text = "‾" },
-			changedelete = { text = "~" },
-			untracked = { text = "┆" },
-		},
-		on_attach = function(bufnr)
-			local gitsigns = require("gitsigns")
-			local function gsmap(mode, l, r, opts)
-				opts = opts or {}
-				opts.buffer = bufnr
-				vim.keymap.set(mode, l, r, opts)
-			end
-
-			gsmap("n", "[c", function()
-				gitsigns.nav_hunk("prev")
-			end, { desc = "[G]o to [P]revious Hunk" })
-			gsmap("n", "]", function()
-				gitsigns.nav_hunk("next")
-			end, { desc = "[G]it go to [N]ext Hunk" })
-			gsmap("n", "<leader>gd", gitsigns.preview_hunk, { desc = "[G]it [D]iff Hunk" })
-			gsmap("n", "<leader>gr", gitsigns.reset_hunk, { desc = "[G]it [R]eset hunk" })
-			gsmap("n", "<leader>gu", gitsigns.undo_stage_hunk, { desc = "[G]it [U]nstage hunk" })
-			gsmap("n", "<leader>gs", gitsigns.stage_hunk, { desc = "[G]it [S]tage hunk" })
-			gsmap("n", "<leader>gl", gitsigns.toggle_current_line_blame, { desc = "[G]it [B]lame" })
-		end,
-	},
+	-- "lewis6991/gitsigns.nvim",
+	-- event = "BufRead",
+	-- opts = {
+	-- 	signs = {
+	-- 		add = { text = "┃" },
+	-- 		chage = { text = "┃" },
+	-- 		delete = { text = "_" },
+	-- 		topdelete = { text = "‾" },
+	-- 		changedelete = { text = "~" },
+	-- 		untracked = { text = "┆" },
+	-- 	},
+	-- 	on_attach = function(bufnr)
+	-- 		local gitsigns = require("gitsigns")
+	-- 		local function gsmap(mode, l, r, opts)
+	-- 			opts = opts or {}
+	-- 			opts.buffer = bufnr
+	-- 			vim.keymap.set(mode, l, r, opts)
+	-- 		end
+	--
+	-- 		gsmap("n", "[c", function()
+	-- 			gitsigns.nav_hunk("prev")
+	-- 		end, { desc = "[G]o to [P]revious Hunk" })
+	-- 		gsmap("n", "]", function()
+	-- 			gitsigns.nav_hunk("next")
+	-- 		end, { desc = "[G]it go to [N]ext Hunk" })
+	-- 		gsmap("n", "<leader>gd", gitsigns.preview_hunk, { desc = "[G]it [D]iff Hunk" })
+	-- 		gsmap("n", "<leader>gr", gitsigns.reset_hunk, { desc = "[G]it [R]eset hunk" })
+	-- 		gsmap("n", "<leader>gu", gitsigns.undo_stage_hunk, { desc = "[G]it [U]nstage hunk" })
+	-- 		gsmap("n", "<leader>gs", gitsigns.stage_hunk, { desc = "[G]it [S]tage hunk" })
+	-- 		gsmap("n", "<leader>gl", gitsigns.toggle_current_line_blame, { desc = "[G]it [B]lame" })
+	-- 	end,
+	-- },
 }

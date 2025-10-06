@@ -6,7 +6,7 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
 config.font = wezterm.font_with_fallback({
-  { family = "FiraCode Nerd Font", weight = "Medium" },
+  { family = "Iosevka Nerd Font", weight = "Medium" },
 })
 
 config.font_size = 15
@@ -23,8 +23,6 @@ config.colors = {
   -- cursor_bg = "20C20E",
 }
 
-configcursor_blink_rate = 600
-
 config.color_scheme = "catppuccin-mocha"
 
 config.window_padding = {
@@ -39,8 +37,8 @@ config.window_background_image_hsb = {
   saturation = 0.8,
 }
 
-config.window_background_opacity = 0.9
--- config.window_background_opacity = 1
+-- config.window_background_opacity = 0.9
+config.window_background_opacity = 1
 config.macos_window_background_blur = 20
 
 -- uncomment these if u wanna be cool - you're not
