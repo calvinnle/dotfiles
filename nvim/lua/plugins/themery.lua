@@ -6,6 +6,10 @@ return {
       require("themery").setup({
         themes = {
           {
+            name = "gruber-darker",
+            colorscheme = "gruber-darker"
+          },
+          {
             name = "cyberdream",
             colorscheme = "cyberdream",
           },
@@ -98,6 +102,7 @@ return {
     end,
   },
   -- Lazy
+  { "blazkowolf/gruber-darker.nvim" },
   {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
@@ -344,7 +349,7 @@ return {
     "vague2k/vague.nvim",
     config = function()
       require("vague").setup({
-        transparent = true,
+        transparent = false,
         italic = false,
       })
     end,
@@ -371,5 +376,5 @@ return {
       vim.api.nvim_set_hl(0, "TreesitterContextBottom", { bg = "#232429", underline = true })
       vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff" })
     end,
-  },
+  }
 }

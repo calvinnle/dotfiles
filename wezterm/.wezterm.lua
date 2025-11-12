@@ -6,21 +6,21 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
 config.font = wezterm.font_with_fallback({
-  { family = "Iosevka Nerd Font", weight = "Medium" },
+  { family = "Iosevka Nerd Font", weight = "Regular" },
 })
 
 config.font_size = 15
 
 config.colors = {
-  background = "000000",
+  -- background = "000000",
 
   -- for dark background
-  cursor_fg = "black",
-  cursor_bg = "white",
+  -- cursor_fg = "black",
+  -- cursor_bg = "white",
 
   -- for light background
-  -- cursor_fg = "white",
-  -- cursor_bg = "20C20E",
+  cursor_fg = "white",
+  cursor_bg = "black",
 }
 
 config.color_scheme = "catppuccin-mocha"

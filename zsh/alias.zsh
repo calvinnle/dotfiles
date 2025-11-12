@@ -1,5 +1,5 @@
-alias ls=lsPretty
-alias ll=llPretty
+# alias ls=lsPretty
+# alias ll=llPretty
 alias wireshark="open /Applications/Wireshark.app/"
 alias cat="bat"
 alias v="nvim"

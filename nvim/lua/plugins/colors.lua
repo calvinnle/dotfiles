@@ -1,15 +1,15 @@
 return {
-	-- -- {
-	-- -- 	"maxmx03/solarized.nvim",
-	-- -- 	lazy = false,
-	-- -- 	priority = 1000,
-	-- -- 	opts = {},
-	-- -- 	config = function(_, opts)
-	-- -- 		vim.o.termguicolors = true
-	-- -- 		vim.o.background = "light"
-	-- -- 		require("solarized").setup(opts)
-	-- -- 	end,
-	-- -- },
+	 -- {
+	 -- 	"maxmx03/solarized.nvim",
+	 -- 	lazy = false,
+	 -- 	priority = 1000,
+	 -- 	opts = {},
+	 -- 	config = function(_, opts)
+	 -- 		vim.o.termguicolors = true
+	 -- 		vim.o.background = "light"
+	 -- 		require("solarized").setup(opts)
+	 -- 	end,
+	 -- },
 	--
 	-- {
 	-- 	"rose-pine/neovim",

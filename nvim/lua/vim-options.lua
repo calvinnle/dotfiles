@@ -25,25 +25,27 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- only number is highlighted for cursorline
--- vim.opt.culopt = "screenline"
-vim.opt.cursorline = false
+-- vim.opt.culopt = "number"
+vim.opt.cursorline = true
 
 -- for dark mod3
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 -- for light mod3
--- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
 
 -- Customize cursor appearance
 vim.opt.guicursor = "n-v-c-sm:block"
 
 vim.o.scrolloff = 8
 vim.opt.swapfile = false
-vim.opt.nuw = 6
+vim.opt.nuw = 4
 vim.o.termguicolors = true
 vim.opt.colorcolumn = "85"
 
-vim.opt.signcolumn = "yes"
+vim.opt.showtabline = 0
+
+-- vim.opt.signcolumn = "yes"
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0

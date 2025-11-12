@@ -101,3 +101,5 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
