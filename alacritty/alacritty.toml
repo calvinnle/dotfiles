@@ -1,4 +1,4 @@
-  [env]
+[env]
 TERM = "xterm-256color"
 
 [general]
@@ -6,20 +6,20 @@ live_config_reload = true
 
 [window]
 decorations = "None"
-opacity = 0.95
+# opacity = 0.9
 startup_mode = "Maximized"
 dynamic_title = true
 dynamic_padding = true
 padding = { x = 0, y = 0 }
-blur = false
+blur = true
 
 [font]
-normal = {family = "Iosevka Nerd Font", style = "Medium"}
+normal = {family = "Iosevka Nerd Font", style = "Regular"}
 size = 15
 
 [colors]
 [colors.primary]
-background = "#020202"
+background = "#000000"
 
 [selection]
 save_to_clipboard = false
