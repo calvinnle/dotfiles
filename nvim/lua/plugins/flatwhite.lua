@@ -1,3 +1,0 @@
-return {
-  "biletskyy/flatwhite-syntax"
-}

@@ -5,7 +5,7 @@ TERM = "xterm-256color"
 live_config_reload = true
 
 [window]
-decorations = "None"
+decorations = "Full"
 # opacity = 0.9
 startup_mode = "Maximized"
 dynamic_title = true
@@ -14,7 +14,7 @@ padding = { x = 0, y = 0 }
 blur = true
 
 [font]
-normal = {family = "Iosevka Nerd Font", style = "Regular"}
+normal = {family = "JetBrainsMono Nerd Font", style = "Regular"}
 size = 15
 
 [colors]

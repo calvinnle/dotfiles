@@ -2,6 +2,34 @@ require("config.lazy")
 require("vim-options")
 require("vim-keymaps")
 
+-- Enable statusline
+vim.opt.laststatus = 2
+
+-- Build statusline
+local statusline = {}
+
+-- Left section
+statusline[#statusline + 1] = "%#StatusLine#"
+statusline[#statusline + 1] = " %{toupper(mode())}"  -- Mode
+statusline[#statusline + 1] = " %f"                  -- File path
+statusline[#statusline + 1] = " %m"                  -- Modified flag
+statusline[#statusline + 1] = " %r"                  -- Readonly flag
+
+-- Middle section (separator)
+statusline[#statusline + 1] = "%="
+
+-- Right section
+statusline[#statusline + 1] = "%y"                   -- File type
+statusline[#statusline + 1] = " [%{&fileencoding}]"  -- Encoding
+statusline[#statusline + 1] = " %l:%c"               -- Line:Column
+statusline[#statusline + 1] = " %p%%"                -- Percentage
+
+-- Set the statusline
+vim.opt.statusline = table.concat(statusline, "")
+
+-- Set highlight groups
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "#d3d3d3", fg = "#000000" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#d3d3d3", fg = "#666666" })
 -- vim.cmd("colorscheme solarized")
 
 -- -- Tmux horizontal split mapping

@@ -1,8 +1,3 @@
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=4")
--- vim.cmd("set softtabstop=4")
--- vim.cmd("set shiftwidth=4")
-
 vim.cmd("set tabstop=2")
 vim.cmd("set expandtab")
 vim.cmd("set softtabstop=2")
@@ -26,10 +21,10 @@ vim.opt.splitbelow = true
 
 -- only number is highlighted for cursorline
 -- vim.opt.culopt = "number"
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- for dark mod3
--- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 -- for light mod3
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })

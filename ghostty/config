@@ -9,17 +9,13 @@ background = 000000
 background-opacity = 0.99
 macos-icon = official
 title = "👻"
-macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = hidden 
-
-cursor-style-blink = false
+cursor-style-blink = true
 cursor-style = block
-cursor-color = white
 mouse-hide-while-typing
 
 working-directory = home
 
-font-family = JetBrainsMono Nerd Font
+font-family = Iosevka Nerd Font
 font-style = Regular
 font-size = 12
 font-thicken = true
