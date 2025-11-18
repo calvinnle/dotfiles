@@ -6,7 +6,11 @@ config.enable_tab_bar = false
 -- config.window_decorations = "RESIZE"
 
 config.font = wezterm.font_with_fallback({
-  { family = "Iosevka Nerd Font", weight = "Bold" },
+  {
+    family = "DejaVuSansM Nerd Font",
+    weight = "Regular",
+    harfbuzz_features = { "liga=1", "clig=1", "calt=1" },
+  }, -- Enable common ligatures
 })
 
 config.font_size = 14
@@ -23,13 +27,12 @@ config.colors = {
   -- cursor_bg = "black",
 }
 
-config.color_scheme = "catppuccin-mocha"
+-- config.color_scheme = "catppuccin-mocha"
 
 config.window_padding = {
   -- left = 20,
   -- bottom = 0,
 }
-
 
 config.cursor_blink_rate = 100
 
@@ -41,7 +44,7 @@ config.window_background_image_hsb = {
 }
 
 -- config.window_background_opacity = 0.9
-config.macos_window_background_blur = 30
+-- config.macos_window_background_blur = 30
 
 -- uncomment these if u wanna be cool - you're not
 
@@ -51,7 +54,5 @@ config.macos_window_background_blur = 30
 -- local bg_image = background_folder .. "/stalenhag.jpg"
 --
 -- config.window_background_image = bg_image
---
--- config.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
 
 return config

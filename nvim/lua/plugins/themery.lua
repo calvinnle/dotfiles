@@ -172,11 +172,11 @@ return {
           -- miscs = {}, -- Uncomment to turn off hard-coded styles
         },
         color_overrides = {
-          macchiato = {
-            base = "#000000",
-            mantle = "#000000",
-            crust = "#000000",
-          },
+          -- macchiato = {
+          --   base = "#000000",
+          --   mantle = "#000000",
+          --   crust = "#000000",
+          -- },
         },
         custom_highlights = {},
         default_integrations = true,

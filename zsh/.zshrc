@@ -105,3 +105,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc'; fi

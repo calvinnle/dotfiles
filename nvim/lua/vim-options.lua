@@ -21,13 +21,13 @@ vim.opt.splitbelow = true
 
 -- only number is highlighted for cursorline
 -- vim.opt.culopt = "number"
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 -- for dark mod3
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "yellow" })
 
 -- for light mod3
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
+-- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
 
 -- Customize cursor appearance
 vim.opt.guicursor = "n-v-c-sm:block"
