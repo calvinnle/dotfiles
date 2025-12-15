@@ -18,9 +18,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
-#
+eval "$(starship init zsh)"
+
 # Default prompt
-PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
+# PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
+
 # Plugins
 plugins+=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux )
 
@@ -54,20 +56,10 @@ if [ -f ~/.vscode-zshrc ]; then
   source ~/.vscode-zshrc
 fi
 
-# Functions
-function lsPretty() {
-	eza --time-style relative $1
-}
-
-function llPretty() {
-	eza -l --time-style relative $1
-}
-
 export PATH="/opt/homebrew/opt/mysql/bin:$PATH"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 export PATH="$HOME/.local/scripts:$PATH"
 
-eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
