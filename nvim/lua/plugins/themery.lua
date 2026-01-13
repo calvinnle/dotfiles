@@ -6,8 +6,16 @@ return {
       require("themery").setup({
         themes = {
           {
+            name = "ef",
+            colorscheme = "ef-spring",
+          },
+          {
+            name = "makurai",
+            colorscheme = "makurai_autumn",
+          },
+          {
             name = "gruber-darker",
-            colorscheme = "gruber-darker"
+            colorscheme = "gruber-darker",
           },
           {
             name = "cyberdream",
@@ -41,7 +49,10 @@ return {
             name = "catppuccin - custom to be dark af",
             colorscheme = "catppuccin-macchiato",
           },
-
+          {
+            name = "dracula",
+            colorscheme = "dracula",
+          },
           {
             name = "kanagawa-lotus",
             colorscheme = "kanagawa-lotus",
@@ -102,7 +113,25 @@ return {
     end,
   },
   -- Lazy
-  { "blazkowolf/gruber-darker.nvim" },
+  {
+    "blazkowolf/gruber-darker.nvim",
+    opts = {
+      bold = false,
+      invert = {
+        signs = false,
+        tabline = false,
+        visual = false,
+      },
+      italic = {
+        strings = false,
+        comments = true,
+        operators = false,
+        folds = false,
+      },
+      undercurl = true,
+      underline = true,
+    },
+  },
   {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
@@ -172,11 +201,11 @@ return {
           -- miscs = {}, -- Uncomment to turn off hard-coded styles
         },
         color_overrides = {
-          -- macchiato = {
-          --   base = "#000000",
-          --   mantle = "#000000",
-          --   crust = "#000000",
-          -- },
+          frappe = {
+            base = "#000000",
+            mantle = "#000000",
+            crust = "#000000",
+          },
         },
         custom_highlights = {},
         default_integrations = true,
@@ -349,8 +378,9 @@ return {
     "vague2k/vague.nvim",
     config = function()
       require("vague").setup({
-        transparent = true,
+        transparent = false,
         italic = false,
+        bold = false,
       })
     end,
   },
@@ -376,5 +406,22 @@ return {
       vim.api.nvim_set_hl(0, "TreesitterContextBottom", { bg = "#232429", underline = true })
       vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff" })
     end,
-  }
+  },
+  { "Skardyy/makurai-nvim" },
+  -- Using Packer:
+  { "Mofiqul/dracula.nvim" },
+  -- Using lazy.nvim
+  {
+    "metalelf0/black-metal-theme-neovim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("black-metal").setup({
+        theme = "venom",
+        variant = "dark",
+      })
+    end,
+  },
+  { "Shatur/neovim-ayu" },
+  { "oonamo/ef-themes.nvim" },
 }

@@ -56,8 +56,8 @@ return {
 				vim.keymap.set("t", "<Esc>", "<Esc>", opts)
 
 				-- ENABLE RELATIVE LINE NUMBERS
-				vim.opt_local.relativenumber = true
-				vim.opt_local.number = true 
+				-- vim.opt_local.relativenumber = true
+				-- vim.opt_local.number = true 
 			end,
 		})
 
@@ -65,8 +65,8 @@ return {
 		vim.api.nvim_create_autocmd("TermEnter", {
 			pattern = "*",
 			callback = function()
-				vim.opt_local.relativenumber = true
-				vim.opt_local.number = true
+				-- vim.opt_local.relativenumber = true
+				-- vim.opt_local.number = true
 			end,
 		})
 

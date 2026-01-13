@@ -6,23 +6,29 @@ live_config_reload = true
 
 [window]
 decorations = "None"
-# opacity = 0.9
 startup_mode = "Maximized"
 dynamic_title = true
 dynamic_padding = true
-padding = { x = 0, y = 0 }
-blur = true
+padding = { x = 6, y = 0 }
+blur = false
+opacity = 0.92
 
 [font]
-normal = {family = "DejaVuSansM Nerd Font", style = "Regular"}
+normal = {family = "Iosevka Nerd Font", style = "Medium"}
 size = 15
 
-[colors]
 [colors.primary]
-background = "#000000"
+background = "#080808"
+
+[colors]
+cursor = { text = "#000000", cursor = "#ffdd33" }
 
 [selection]
 save_to_clipboard = false
 
 [mouse]
 hide_when_typing = true
+
+[cursor]
+style = { shape = "Block", blinking= "Always"}
+blink_interval = 350

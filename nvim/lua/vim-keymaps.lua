@@ -18,3 +18,10 @@ vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]])
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]])
 vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]])
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]])
+
+vim.keymap.set("n", "<leader>r", function()
+	vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-options.lua")
+	print("Config reloaded!")
+end)
+
+vim.keymap.set("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)

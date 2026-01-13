@@ -15,13 +15,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # All my favorite ZSH Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Default prompt
-# PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
+PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
 
 # Plugins
 plugins+=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux )
