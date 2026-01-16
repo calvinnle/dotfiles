@@ -1,8 +1,5 @@
 local keymap = vim.keymap
 
--- Explore keymap
--- keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- window management
 keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
@@ -21,7 +18,8 @@ vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]])
 
 vim.keymap.set("n", "<leader>r", function()
 	vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-options.lua")
-	print("Config reloaded!")
+	vim.cmd("source /Users/lenguyenkhang/.config/nvim/init.lua")
+	print("Config reloaded")
 end)
 
 vim.keymap.set("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)

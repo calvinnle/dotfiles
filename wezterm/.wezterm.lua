@@ -24,15 +24,15 @@ config.colors = {
 	cursor_bg = "ffdd33",
 
 	-- for light background
-	-- cursor_fg = "white",
-	-- cursor_bg = "FF00FF",
+	-- cursor_fg = "black",
+	-- cursor_bg = "ff00ff",
 }
 
 config.color_scheme = "Gruber (base16)"
 -- config.color_scheme = "rose-pine"
 
 config.window_padding = {
-	left = 5,
+	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
@@ -49,8 +49,8 @@ config.window_background_image_hsb = {
 	saturation = 0.8,
 }
 
--- config.window_background_opacity = 0.89
--- config.macos_window_background_blur = 20
+-- config.window_background_opacity = 0.90
+-- config.macos_window_background_blur = 15
 
 -- uncomment these if u wanna be cool - you're not
 

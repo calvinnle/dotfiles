@@ -64,3 +64,5 @@ vim.api.nvim_set_hl(0, "MatchParen", { link = "Normal" })  -- Make it invisible
 -- OR disable completely
 vim.o.showmatch = false
 vim.o.matchpairs = ""  -- Clear all matching pairs
+
+vim.opt.autochdir = true

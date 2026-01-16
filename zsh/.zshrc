@@ -103,3 +103,5 @@ if [ -f '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/l
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"

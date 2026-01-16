@@ -123,10 +123,10 @@ preset = 'qwerty'
 
 [gaps]
 inner.horizontal = 0
-inner.vertical =   0
+inner.vertical =   0 
 outer.left =       0
-outer.bottom =     -2
-outer.top =        0
+outer.bottom =     0
+outer.top =        0 
 outer.right =      0
 
 [exec] # Again, you don't need to copy all config sections to your config.

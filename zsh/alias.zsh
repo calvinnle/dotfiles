@@ -7,5 +7,4 @@ alias cpf="bash /Users/lenguyenkhang/dotfiles/helper/copyfile.sh"
 alias f="fastfetch"
 alias python="python3"
 alias ls="ls --color=never"
-alias vim='vim + "syntax off"'
-alias em="open /Applications/Emacs.app"
+alias em="emacs"
