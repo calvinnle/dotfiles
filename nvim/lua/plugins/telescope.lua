@@ -24,6 +24,14 @@ return {
 						find_cmd = "rg",
 					},
 				},
+				-- Always search from project root, not current file directory
+				cwd = function()
+					local git_root = vim.fn.system("git rev-parse --show-toplevel 2>/dev/null"):gsub("%s+", "")
+					if git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
+						return git_root
+					end
+					return vim.fn.getcwd()
+				end,
 				pickers = {
 					colorscheme = {
 						enable_preview = true,
@@ -56,21 +64,38 @@ return {
 			-- set keymaps
 			local keymap = vim.keymap -- for conciseness
 
-			keymap.set("n", "<leader>sf", "<cmd>Telescope find_files hidden=true<cr>")
+			-- Helper function to get project root
+			local function get_project_root()
+				local git_root = vim.fn.system("git rev-parse --show-toplevel 2>/dev/null"):gsub("%s+", "")
+				if git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
+					return git_root
+				end
+				return vim.fn.getcwd()
+			end
+
+			keymap.set("n", "<leader>sf", function()
+				require("telescope.builtin").find_files({ hidden = true, cwd = get_project_root() })
+			end, { desc = "Find files from project root" })
 			keymap.set("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>")
-			keymap.set("n", "<leader>ss", "<cmd>Telescope live_grep<cr>")
+			keymap.set("n", "<leader>ss", function()
+				require("telescope.builtin").live_grep({ cwd = get_project_root() })
+			end, { desc = "Live grep from project root" })
 			keymap.set("n", "<leader>sb", "<cmd>Telescope Buffers<cr>")
 			keymap.set(
 				"n",
 				"<leader>sc",
-				"<cmd>Telescope grep_string<cr>",
-				{ desc = "Find string under cursor in cwd" }
+				function()
+					require("telescope.builtin").grep_string({ cwd = get_project_root() })
+				end,
+				{ desc = "Find string under cursor in project root" }
 			)
 			keymap.set(
 				"n",
 				"<leader>sh",
-				"<cmd>Telescope find_files hidden=true<cr>",
-				{ desc = "Find hidden files in cwd" }
+				function()
+					require("telescope.builtin").find_files({ hidden = true, cwd = get_project_root() })
+				end,
+				{ desc = "Find hidden files from project root" }
 			)
 			keymap.set("n", "<leader>en", function()
 				local opts = require("telescope.themes").get_ivy({
