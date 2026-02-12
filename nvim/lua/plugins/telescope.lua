@@ -46,9 +46,9 @@ return {
 					},
 					file_ignore_patterns = {
 						".git",
-						-- all your ignore settings come here
 						"node_modules",
 					}, -- Ensure this is empty to avoid exclusions
+					find_command = { "rg", "--files", "--hidden" },
 					mappings = {
 						i = {
 							["<C-k>"] = actions.move_selection_previous,
@@ -81,21 +81,13 @@ return {
 				require("telescope.builtin").live_grep({ cwd = get_project_root() })
 			end, { desc = "Live grep from project root" })
 			keymap.set("n", "<leader>sb", "<cmd>Telescope Buffers<cr>")
-			keymap.set(
-				"n",
-				"<leader>sc",
-				function()
-					require("telescope.builtin").grep_string({ cwd = get_project_root() })
-				end,
-				{ desc = "Find string under cursor in project root" }
-			)
+			keymap.set("n", "<leader>sc", function()
+				require("telescope.builtin").grep_string({ cwd = get_project_root() })
+			end, { desc = "Find string under cursor in project root" })
 			keymap.set(
 				"n",
 				"<leader>sh",
-				function()
-					require("telescope.builtin").find_files({ hidden = true, cwd = get_project_root() })
-				end,
-				{ desc = "Find hidden files from project root" }
+				"<cmd>lua require('telescope.builtin').find_files({additional_args = {'--hidden'}})<cr>"
 			)
 			keymap.set("n", "<leader>en", function()
 				local opts = require("telescope.themes").get_ivy({

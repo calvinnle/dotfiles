@@ -43,7 +43,7 @@
                     "simple_modifications": [
                         {
                             "from": { "key_code": "escape" },
-                            "to": [{ "key_code": "vk_none" }]
+                            "to": [{ "key_code": "caps_lock" }]
                         },
                         {
                             "from": { "key_code": "left_command" },
@@ -68,10 +68,6 @@
                         {
                             "from": { "key_code": "right_shift" },
                             "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
-                        },
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "escape" }]
                         }
                     ]
                 }

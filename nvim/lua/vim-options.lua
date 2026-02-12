@@ -4,7 +4,7 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
-vim.o.background = "light"
+-- vim.o.background = "dark"
 
 -- Clipboard
 vim.opt.clipboard:append("unnamedplus")
@@ -27,7 +27,7 @@ vim.opt.splitbelow = true
 
 -- Cursor line
 vim.opt.cursorline = false
-vim.opt.cursorlineopt = "number"
+vim.opt.cursorlineopt = "both"
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffdd33" })
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "red" })
 
@@ -63,6 +63,6 @@ vim.cmd("noh")
 vim.api.nvim_set_hl(0, "MatchParen", { link = "Normal" })  -- Make it invisible
 -- OR disable completely
 vim.o.showmatch = false
-vim.o.matchpairs = ""  -- Clear all matching pairs
+vim.o.matchpairs = ""
 
 vim.opt.autochdir = true

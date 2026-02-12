@@ -1,22 +1,38 @@
-window-height=66666
-window-width=8888
-window-step-resize = true
-window-padding-balance = true
-window-save-state = always
-window-padding-x = 6
+#window-height=66666
+#window-width=8888
+#window-step-resize = true
+#window-padding-balance = true
+#window-save-state = always
+#window-padding-x = 6
 
-background = 000000
-background-opacity = 0.99
-macos-icon = official
-title = "👻"
+background = 080808
+# background-opacity = 0.9
+background-blur = true
 cursor-style-blink = true
-cursor-style = block
+# title = "👻"
+cursor-opacity = 0.5
+# cursor-color = #ffdd33
+# cursor-text = #000000
 mouse-hide-while-typing
+window-theme = system
+window-decoration = client
+macos-titlebar-style = native
+macos-titlebar-proxy-icon = hidden
 
-working-directory = home
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = #FFFF00
+macos-icon-screen-color = #720e9e
 
-font-family = Iosevka Nerd Font
+shell-integration = none
+bell-features = no-audio
+
+font-family = Menlo
 font-style = Regular
 font-size = 12
-font-thicken = true
+font-thicken = true 
 font-feature = -calt -dlig -liga
+
+theme = Vague
+
+term=xterm-256color

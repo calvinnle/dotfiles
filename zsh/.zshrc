@@ -1,4 +1,4 @@
-# Amazo Q pre block. Keep at the top of this file.
+# Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]]\
 && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -15,10 +15,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # All my favorite ZSH Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="simple"
 # ZSH_THEME="apple"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Default prompt
 PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}$%b "
@@ -45,7 +45,7 @@ export EDITOR="nvim"
 
 bindkey -v
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # NOTE: FZF
 # Set up fzf key bindings and fuzzy completion
@@ -72,7 +72,7 @@ export PATH="$HOME/.local/scripts:$PATH"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH="$PATH:$HOME/flutter/bin"
 
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 export PATH=$PATH:~/zig
 
 export NVM_DIR="$HOME/.nvm"
@@ -96,7 +96,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc'; fi
@@ -105,3 +105,9 @@ if [ -f '/Users/lenguyenkhang/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/l
 if [ -f '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lenguyenkhang/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+
+export DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+
+export MANPAGER="nvim +Man! -c 'set relativenumber' -c 'set number'"
+
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET" 

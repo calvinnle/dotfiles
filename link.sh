@@ -23,7 +23,7 @@ ln -svnf $DOTFILES_DIR/zsh/.zshrc ~/.zshrc
 ln -svnf $DOTFILES_DIR/zsh/alias.zsh ~/.config/zsh/alias.zsh
 ln -svnf $DOTFILES_DIR/starship/starship.toml ~/.config/starship.toml
 ln -svnf $DOTFILES_DIR/tmux/.tmux.conf ~/.tmux.conf
+ln -svnf $DOTFILES_DIR/zathura ~/.config/zathura
 
 # Print completion message
 echo "Symlinks created successfully!"
-
