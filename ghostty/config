@@ -1,23 +1,22 @@
-#window-height=66666
-#window-width=8888
-#window-step-resize = true
-#window-padding-balance = true
-#window-save-state = always
-#window-padding-x = 6
+window-step-resize = true
+window-padding-balance = true
+window-save-state = always
 
-background = 080808
-# background-opacity = 0.9
-background-blur = true
+# background = 000000
+# background-opacity = 0.8
+# background-blur = true
 cursor-style-blink = true
-# title = "👻"
-cursor-opacity = 0.5
+# 👻
+# cursor-opacity = 0.5
 # cursor-color = #ffdd33
-# cursor-text = #000000
+cursor-text = #000000
 mouse-hide-while-typing
 window-theme = system
 window-decoration = client
 macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
+
+window-subtitle = working-directory
 
 macos-icon = custom-style
 macos-icon-frame = aluminum
@@ -27,12 +26,13 @@ macos-icon-screen-color = #720e9e
 shell-integration = none
 bell-features = no-audio
 
-font-family = Menlo
+font-family = Iosevka
 font-style = Regular
-font-size = 12
-font-thicken = true 
+font-size = 15
+font-thicken = false 
 font-feature = -calt -dlig -liga
 
-theme = Vague
+theme = Gruber Darker
+adjust-cursor-thickness = 5
 
 term=xterm-256color
