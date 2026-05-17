@@ -5,38 +5,42 @@ local config = wezterm.config_builder()
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
+wezterm.on("format-window-title", function()
+	return "useless-terminal-emulator"
+end)
+
 config.font = wezterm.font_with_fallback({
-  {
-    -- family = "MesloLGS NF",
-    family = "Iosevka Nerd Font",
-    weight = "Regular",
-    harfbuzz_features = { "liga", "clig", "calt" },
-  },
+	{
+		family = "FiraCode Nerd Font",
+		-- family = "Iosevka Nerd Font",
+		weight = "Regular",
+		-- harfbuzz_features = { "liga", "clig", "calt" },
+	},
 })
 
 config.font_size = 14
 config.font_shaper = "Harfbuzz"
 
 config.colors = {
-  background = "141414",
+	background = "000000",
 
-  -- for dark background
-  cursor_fg = "000000",
-  cursor_bg = "a0a0a0",
+	-- for dark background
+	cursor_fg = "000000",
+	-- cursor_bg = "ffdd33",
 
-  -- for light background
-  -- cursor_fg = "black",
-  -- cursor_bg = "ff00ff",
+	-- for light background
+	-- cursor_fg = "black",
+	-- cursor_bg = "gray",
 }
 
 config.color_scheme = "Gruber (base16)"
--- config.color_scheme = "rose-pine"
+-- config.color_scheme = "Vague"
 
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 config.default_cursor_style = "BlinkingBlock"
@@ -45,13 +49,13 @@ config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 500
 
 config.window_background_image_hsb = {
-  brightness = brightness,
-  hue = 1.0,
-  saturation = 0.8,
+	brightness = brightness,
+	hue = 1.0,
+	saturation = 0.8,
 }
 
--- config.window_background_opacity = 0.90
--- config.macos_window_background_blur = 15
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 8
 
 -- uncomment these if u wanna be cool - you're not
 

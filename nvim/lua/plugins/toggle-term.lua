@@ -9,8 +9,7 @@ return {
 				width = 88,
 				height = 22,
 			},
-			shade_terminals = true,
-			shading_factor = -50,
+			shade_terminals = false,
 			terminal_mappings = false,
 			persist_mode = true,
 		})

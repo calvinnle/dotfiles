@@ -17,19 +17,19 @@ vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]])
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]])
 
 vim.keymap.set("n", "<leader>r", function()
-  vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-options.lua")
-  vim.cmd("source /Users/lenguyenkhang/.config/nvim/init.lua")
-  vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-keymaps.lua")
-  print("Config reloaded")
-end)
+	vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-options.lua")
+	vim.cmd("source /Users/lenguyenkhang/.config/nvim/init.lua")
+	vim.cmd("source /Users/lenguyenkhang/.config/nvim/lua/vim-keymaps.lua")
 
--- open links with default browser
-vim.keymap.set("n", "<leader>o", function()
-  local url = vim.fn.expand("<cfile>")
-  if url ~= "" then
-    vim.fn.system({ "open", url })
-    print("Opened: " .. url)
-  else
-    print("No URL found under cursor")
-  end
-end, { desc = "Open link under cursor in default browser" })
+	-- Source all ftplugin files
+	local ftplugin_dir = "/Users/lenguyenkhang/.config/nvim/after/ftplugins"
+	if vim.fn.isdirectory(ftplugin_dir) == 1 then
+		local files = vim.fn.globpath(ftplugin_dir, "*.lua", false, true)
+		for _, file in ipairs(files) do
+			vim.cmd("source " .. file)
+		end
+		print(string.format("Config reloaded (%d ftplugins sourced)", #files))
+	else
+		print("Config reloaded (no ftplugins found)")
+	end
+end)

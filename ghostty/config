@@ -1,18 +1,18 @@
-window-step-resize = true
-window-padding-balance = true
+# window-step-resize = true
+# window-padding-balance = true
 window-save-state = always
 
-# background = 000000
-# background-opacity = 0.8
-# background-blur = true
 cursor-style-blink = true
 # 👻
-# cursor-opacity = 0.5
-# cursor-color = #ffdd33
 cursor-text = #000000
+cursor-color= #ffffff
+# cursor-opacity = 0.6
 mouse-hide-while-typing
 window-theme = system
-window-decoration = client
+window-decoration = none
+background-opacity = 0.85
+background-blur = 0
+background = #080808
 macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
 
@@ -26,13 +26,14 @@ macos-icon-screen-color = #720e9e
 shell-integration = none
 bell-features = no-audio
 
-font-family = Iosevka
+font-family = UbuntuMono Nerd Font
 font-style = Regular
 font-size = 15
 font-thicken = false 
-font-feature = -calt -dlig -liga
+font-feature = +calt +dlig +liga
 
-theme = Gruber Darker
-adjust-cursor-thickness = 5
+theme = cyberdream
+adjust-cursor-thickness = 2
 
 term=xterm-256color
+macos-non-native-fullscreen = visible-menu

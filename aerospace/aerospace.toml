@@ -1,5 +1,5 @@
 after-startup-command = [
-    'exec-and-forget borders active_color=0xff00f5ff inactive_color=0xff555555 width=5.0',
+    # 'exec-and-forget borders active_color=0xff00f5ff inactive_color=0xff555555 width=5.0',
     # 'exec-and-forget sketchybar'
 ]
 
@@ -66,14 +66,6 @@ if.app-name-regex-substring = 'discord'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Notes'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'spotify'
-run = 'layout floating'
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'mail'
 run = 'layout floating'
 
@@ -117,7 +109,7 @@ preset = 'qwerty'
 4 = 'V32UE'
 5 = 'V32UE'
 # 6 = '^27W'
-# 7 = '^27W'
+# 7 = '^27'
 # 8 = '^EPSON'
 
 
@@ -209,18 +201,17 @@ alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
 alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 
 # alt-tab = 'workspace-back-and-forth'
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-comma = 'mode service'
-# alt-shift-enter = 'mode apps'
+alt-shift-enter = 'mode apps'
 
 # alt-t = 'exec-and-forget open -a /Applications/Telegram.app'
-alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
-alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
-alt-s = 'exec-and-forget open -a /Applications/Safari.app'
-alt-q = 'exec-and-forget open -a /System/Applications/QuickTime Player.app'
-alt-w = 'exec-and-forget open -a /Applications/WezTerm.app'
+# alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
+# alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
+# alt-s = 'exec-and-forget open -a /Applications/Safari.app'
+# alt-q = 'exec-and-forget open -a /System/Applications/QuickTime Player.app'
 
 
 # 'service' binding mode declaration.

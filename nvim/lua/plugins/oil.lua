@@ -4,7 +4,7 @@ return {
 	---@type oil.SetupOpts
 	opts = {},
 	-- Optional dependencies
-	dependencies = { { "echasnovski/mini.icons", opts = {} } },
+	-- dependencies = { { "echasnovski/mini.icons", opts = {} } },
 	-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
 	-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 	lazy = false,
@@ -17,7 +17,7 @@ return {
 			-- Id is automatically added at the beginning, and name at the end
 			-- See :help oil-columns
 			columns = {
-				"icon",
+				-- "icon",
 				-- "permissions",
 				-- "size",
 				-- "mtime",
@@ -211,7 +211,7 @@ return {
 			keymaps_help = {
 				border = "rounded",
 			},
-			vim.keymap.set("n", "ef", function()
+			vim.keymap.set("n", "<leader>ef", function()
 				local oil = require("oil")
 				local is_oil_buf = vim.bo.filetype == "oil"
 

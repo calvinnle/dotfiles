@@ -7,24 +7,22 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-			"nvim-tree/nvim-web-devicons",
+			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		config = function()
 			local telescope = require("telescope")
 			local actions = require("telescope.actions")
-			require("telescope").load_extension("media_files")
 
 			telescope.setup({
 				extensions = {
 					media_files = {
-						-- filetypes whitelist
-						-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
 						filetypes = { "png", "webp", "jpg", "jpeg" },
-						-- find command (defaults to `fd`)
 						find_cmd = "rg",
 					},
+					["ui-select"] = {
+						require("telescope.themes").get_dropdown({}),
+					},
 				},
-				-- Always search from project root, not current file directory
 				cwd = function()
 					local git_root = vim.fn.system("git rev-parse --show-toplevel 2>/dev/null"):gsub("%s+", "")
 					if git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
@@ -34,11 +32,15 @@ return {
 				end,
 				pickers = {
 					colorscheme = {
-						enable_preview = true,
+						enable_preview = false,
 					},
 				},
 				defaults = {
+					devicons = {
+						enable = false,
+					},
 					path_display = { "smart" },
+					-- selection_caret = "λ",
 					layout_config = {
 						horizontal = {
 							preview_width = 0.6,
@@ -47,7 +49,7 @@ return {
 					file_ignore_patterns = {
 						".git",
 						"node_modules",
-					}, -- Ensure this is empty to avoid exclusions
+					},
 					find_command = { "rg", "--files", "--hidden" },
 					mappings = {
 						i = {
@@ -60,11 +62,11 @@ return {
 			})
 
 			telescope.load_extension("fzf")
+			telescope.load_extension("media_files")
+			telescope.load_extension("ui-select")
 
-			-- set keymaps
-			local keymap = vim.keymap -- for conciseness
+			local keymap = vim.keymap
 
-			-- Helper function to get project root
 			local function get_project_root()
 				local git_root = vim.fn.system("git rev-parse --show-toplevel 2>/dev/null"):gsub("%s+", "")
 				if git_root ~= "" and vim.fn.isdirectory(git_root) == 1 then
@@ -74,7 +76,10 @@ return {
 			end
 
 			keymap.set("n", "<leader>sf", function()
-				require("telescope.builtin").find_files({ hidden = true, cwd = get_project_root() })
+				require("telescope.builtin").find_files({
+					hidden = true,
+					cwd = get_project_root(),
+				})
 			end, { desc = "Find files from project root" })
 			keymap.set("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>")
 			keymap.set("n", "<leader>ss", function()
@@ -95,20 +100,6 @@ return {
 				})
 				require("telescope.builtin").find_files(opts)
 			end)
-		end,
-	},
-	{
-		"nvim-telescope/telescope-ui-select.nvim",
-
-		config = function()
-			require("telescope").setup({
-				extensions = {
-					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
-					},
-				},
-			})
-			require("telescope").load_extension("ui-select")
 		end,
 	},
 }

@@ -3,6 +3,7 @@
     "vim",
     "null_ls",
     "opts",
-    "luasnip"
+    "luasnip",
+        "local"
   ]
 }

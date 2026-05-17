@@ -12,7 +12,6 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"clangd",
-					"nil_ls",
 					"gopls",
 				},
 			})
@@ -44,19 +43,8 @@ return {
 				},
 			}
 
-			vim.lsp.enable("nil_ls")
-
 			vim.lsp.enable("lua_ls")
 
-			-- scheme/racket
-			vim.lsp.config["racket_langserver"] = {
-				cmd = { "racket_langserver" },
-				capabilities = capabilities,
-			}
-
-			vim.lsp.enable("racket_langserver")
-
-			-- golang
 			vim.lsp.config["gopls"] = {
 				capabilities = capabilities,
 			}
